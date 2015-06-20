@@ -1,0 +1,34 @@
+.indicator-ctner {
+    width: 100%;
+}
+
+.indicator-ctner label.num-label {
+    margin-top: 10px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.indicator-ctner label.num-label span {
+    color: blue;
+}
+
+.indicator-ctner .bar {
+    width: 80%;
+    height: 10px;
+    background-color: #ececec;
+    position: relative;
+    border: 1px solid #aaa;
+    content: " ";
+}
+
+.indicator-ctner .bar button.btn {
+    width: 10px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    content: " ";
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    pointer: cursor;
+}

@@ -1,0 +1,284 @@
+/* Master CSS file 
+We are Following Mobile first Approach
+*/
+
+html {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+html, body, .container {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, verdana;
+}
+
+body {
+    margin-top: 15px;
+}
+
+@font-face {
+    font-family: 'HelveticaRegular';
+    src: url("/static/fonts/Helvetica_Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h4, label {
+    font-family: "HelveticaNeue";
+    font-size: 14px !important;
+    line-height: 1.4;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+}
+
+span, p, a {
+    font-family: "HelveticaNeue";
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 1.2px;
+    margin: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+div.container {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.container {
+    height: 39px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    line-height: 14px;
+}
+
+.container .header {
+    position: fixed;
+    top: 15px;
+    left: 0px;
+    width: 100%;
+    height: 45px;
+    background-color: #ADC741;
+    text-align: center;
+    z-index: 998;
+}
+
+.container .header label {
+    color: #fff;
+    margin-top: 8px;
+}
+
+.containerHeaderHide {
+    transition: .3s;
+    left: 0px !important;
+}
+
+.containerHeaderShow {
+    transition: .3s;
+    left: 60px !important;
+}
+
+.container .header h3 {
+    font-size: 14px;
+    line-height: 1.2;
+    display: inline-block;
+}
+
+.container .header .sidebar-toggle {
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    z-index: 300;
+    width: auto;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.container .header .sidebar-toggle.back{
+    top: 0px;
+}
+
+.container .header .qr-scan {
+    width: auto;
+    height: 40px;
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    z-index: 300;
+    padding-right: 10px;
+    padding-top: 5px;
+
+}
+
+hr {
+    border: 0px;
+    border-top: 10px solid #edbb0c;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main {
+    padding-top: 39px;
+    width: 100%;
+    float: left;
+    height: 100%;
+    content: " ";
+    overflow: scroll;
+    left: 0px;
+    position: absolute;
+    transition: 0.3s;
+    z-index: 990;
+    background-color: #f1f1f1;
+    top: 5px;
+}
+
+.container.blur {
+    -webkit-filter: blur(4px);
+}
+
+.sidebar {
+    position: absolute;
+    width: 60px;
+    content: " ";
+    background-color: #EDBB0C;
+    float: left;
+    left: 0px;
+    height: 100%;
+    z-index: 1001;
+    display: table;
+    vertical-align: middle;
+}
+
+.sidebar ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.main.slide {
+    left: 60px;
+}
+
+.sidebar.hide {
+    transition: .3s;
+    left: -60px;
+}
+
+.sidebar.show {
+    left: 0px;
+    transition: 0.3s;
+}
+
+.mainOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #4F4D4D;
+    opacity: .6;
+    z-index: 1000;
+}
+
+.menuIconContainer {
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
+}
+
+.menuIconImage {
+    width: 30px;
+    padding-bottom: 32px;
+    padding-top: 8px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.ctner {
+    background-color: #f1f1f1;
+}
+
+.ctner p.confirmation {
+    padding: 0 20px;
+    margin-top: 30px;
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+.ctner.recepient {
+    height: 100%;
+    background-color: #adc741;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.ctner .recepient {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ctner .recepient a.back {
+    display: block;
+    margin-top: 80px;
+    color: #666;
+}
+
+.ctner .recepient label {
+    color: #999;
+}
+
+.ctner .recepient img {
+    width: 125px;
+    border-radius: 50%;
+    display: block;
+    margin: 14px auto;
+}
+
+.showProgressContainer {
+    position: fixed;
+    display: table;
+    z-index: 9010;
+    width: 100%;
+    height: 100%;
+}
+
+.showProgress {
+    display: table-cell;
+    width: 300px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    opacity: .8;
+}
+
+
+.progressBar{
+    position: fixed;
+    margin-top: 51%;
+    text-align: center;
+    top: 0px;
+    left: 41%;
+}
+.progressBar.hide{
+    display: none;
+}
+.progressBar.show{
+    display:block;
+}
+.progressBar img{
+    width: 50px;
+}

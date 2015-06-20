@@ -1,0 +1,81 @@
+<!Doctype html>
+<html ng-app="shopGenie" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0"/>
+    <title>Shop Genie</title>
+    <link href="/assets/app.css" type="text/css" rel="stylesheet"/>
+    <link href="/assets/dashboard.css" type="text/css" rel="stylesheet"/>
+    <link href="/assets/login.css" type="text/css" rel="stylesheet"/>
+    <link href="/assets/ngDialog.css" type="text/css" rel="stylesheet"/>
+    <link href="/libs/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="/libs/bootstrap/css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container" ng-controller="appController" ng-class="{'blur':isBlur}">
+    <div class="header" ng-class="showSidebar?'containerHeaderShow':'containerHeaderHide'">
+        <div class="sidebar-toggle" ng-show="!isSubPage" ng-click="showSidebar = !showSidebar">
+            <img src="/static/images/menu.png"/>
+        </div>
+        <div class="sidebar-toggle back" ng-show="isSubPage" ng-click="back()">
+            <img src="/static/images/arrow-back.png"/>
+        </div>
+        <label>{{pageHeader}}</label>
+        <div ng-show="!isSubPage" class="qr-scan" ng-click="scan()">
+            <img src="/static/images/scan.png"/>
+        </div>
+    </div>
+    <div class="sidebar" ng-class="showSidebar?'show':'hide'">
+        <div class="menuIconContainer">
+            <ul>
+                <li class="cursor">
+                    <img src="/static/images/home.png" ng-click="gotoPage('/wishlist')" class="menuIconImage">
+                </li>
+                <li >
+                    <img src="/static/images/recipient.png" ng-click="gotoPage('/recepients')" class="menuIconImage">
+                </li>
+                <li >
+                    <img src="/static/images/cart.png" ng-click="gotoPage('/checkout')" class="menuIconImage">
+                </li>
+                <li >
+                    <img src="/static/images/history.png" ng-click="gotoPage('/recepients')" class="menuIconImage">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainOverlay" ng-click="onOverlayClicked($event)"  ng-class="showSidebar?'ng-show':'ng-hide'" ></div>
+    <div class="main" ng-class="getMainClass()" ng-view>
+
+    </div>
+</div>
+<script type="text/javascript" src="/libs/angular/angular.js"></script>
+<script type="text/javascript" src="/libs/angular/angular-route.js"></script>
+<script type="text/javascript" src="/libs/angular/angular-touch.js"></script>
+<script type="text/javascript" src="/libs/angular/ngDialog.js"></script>
+
+<script type="text/javascript" src="/libs/jquery/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="/libs/bootstrap/js/bootstrap.js"></script>
+
+
+<script type="text/javascript" src="/modules/app-init.js"></script>
+<script type="text/javascript" src="/modules/app-controller.js"></script>
+<script type="text/javascript" src="/modules/app-service.js"></script>
+<script type="text/javascript" src="/modules/services/data-services.js"></script>
+<script type="text/javascript" src="/modules/app-service.js"></script>
+<!-- -->
+<script type="text/javascript" src="/modules/splash/splash-controller.js"></script>
+<!-- Login Page -->
+
+<script type="text/javascript" src="/modules/login/login-controller.js"></script>
+<!-- Sign Up Page -->
+<script type="text/javascript" src="/modules/signup/signup-controller.js"></script>
+<!-- Wish List Page -->
+<script type="text/javascript" src="/modules/wishlist/wishlist-controller.js"></script>
+<!-- Want you want to do Page -->
+<script type="text/javascript" src="/modules/watuwantodo/watuwantodo-controller.js"></script>
+
+
+
+
+</body>
+</html>

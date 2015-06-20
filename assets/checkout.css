@@ -1,0 +1,232 @@
+.checkout-product {
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.checkout-product::after {
+    content: " ";
+    width: 1px;
+    height: 1px;
+    display: block;
+    clear: both;
+}
+
+.checkout-product img {
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.checkout-product label {
+    padding-right: 10px;
+}
+
+.checkout-product {
+    padding-top: 15px;
+    margin-bottom: 20px;
+    padding: 15px 15px 0px 5px;
+}
+
+.check-product p {
+    width: 140px;
+}
+
+.checkout-product label span {
+    font-weight: normal;
+}
+
+.checkout-recepient {
+    text-align: center;
+}
+
+.checkout-recepient button.pass {
+    background-image: url("/static/images/masterpass.png");
+    margin-bottom: 55px;
+    width: 240px;
+    height: 55px;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.checkout-recepient .cancel {
+    color: #acacac;
+}
+
+.checkout-recepient .recep {
+    width: 170px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px;
+    background-color: #edbb0c;
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.checkout-recepient .recep p {
+    color: #fff;
+}
+
+.checkout-recepient .recep::after {
+    width: 0px;
+    height: 0px;
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 10px solid #edbb0c;
+    border-top: 10px solid #f1f1f1;
+    top: 0px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.checkout-recepient .recep img {
+    width: 125px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.checkout-recepient button {
+    display: block;
+    margin: 0 auto;
+}
+
+.checkout-recepient .more {
+    margin-bottom: 5px;
+}
+
+.checkout-recepient .btn, .more {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+.more {
+    margin-top: 10px;
+    width: 140px;
+    height: 140px;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.more:focus {
+    outline: none;
+}
+
+.dialog-ctner.recep-dialog .btn-cancel {
+    display: block;
+    margin: 18px auto 0px;
+    width: 100px;
+    height: 33px;
+}
+
+
+
+.dialog-ctner.recep-dialog label {
+    text-align: center;
+    display: block;
+    color: #fff;
+}
+
+.recep-detail {
+    display: inline-block;
+    width: 140px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin: 42px 10px 0px 13px;
+    cursor: pointer;
+}
+
+.recep-detail .more {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 5px;
+
+}
+
+.recep-detail p {
+    color: #fff;
+    margin: 0px;
+}
+
+.recep-detail img {
+    border-radius: 50%;
+    width: 125px;
+
+}
+
+.recep-detail label {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.dialog-sub-page {
+    width: 100%;
+    margin-top: 58px;
+    height: 650px;
+}
+
+.dialog-sub-page .ngdialog-content {
+    height: 650px;
+}
+
+.dialog-sub-page .recep-detail {
+    width: 100%;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.dialog-sub-page .recep-detail img {
+    width: 200px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+.dialog-sub-page .recep-description p{
+    padding: 30px 20px 0px 20px;
+}
+.dialog-sub-page .dialog-ctner.recep-dialog .recep-detail {
+    background: -webkit-linear-gradient(top, #adc741, #c9da57);
+}
+
+.recep-detail .avatar-border {
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    width: 216px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    height: 216px;
+    content: " ";
+    margin: 0 auto;
+}
+
+.recep-detail ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+
+.recep-detail ul li {
+    display: inline-block;
+    width: 100px;
+}
+
+.recep-detail ul li:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.recep-detail ul li span {
+    color: #fff;
+}

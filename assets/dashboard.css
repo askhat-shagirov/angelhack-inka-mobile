@@ -1,0 +1,35 @@
+.dashBoardImageContainer{
+    width : 100%
+    float : left;
+    postion : relative;
+    height : 227px;
+    background-color: darkorange;
+}
+.dashBoardContainer {
+    width:100%;
+    height:auto;
+    position: relative;
+}
+.dashBoardItem {
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+.dashboardItemBottomBorder{
+    border-bottom: 10px solid #EDBB0C;
+}
+.head {
+    font-size: 26px!important;
+}
+.contentLbl {
+    font-size: 20px;
+    color: darkorange;
+}
+.contentData {
+    font-weight : bold;
+    font-size: 14px;
+    color : #666666;
+}
+.relation{
+    font-size: 14px;
+    color: #aaaaaa;
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Designer",
+        "avatar": "/static/images/john.jpg",
+        "account": "John@gmail.com",
+        "percentage": 0.2,
+        "totalShared": 900,
+        "transaction": 24,
+        "topUp": 0.4
+    },
+    {
+        "name": "Developer",
+        "avatar": "/static/images/han.jpg",
+        "account": "han@gmail.com",
+        "percentage": 0.3,
+        "totalShared": 600,
+        "transaction": 14,
+        "topUp": 0.7
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "redBull": {
+        "name":"Red Bull",
+        "price": 28,
+        "description": "Energy Drink, With Taurine. Vitalizes body and mind.",
+        "image": "/static/images/redBull.jpg"
+    }
+}

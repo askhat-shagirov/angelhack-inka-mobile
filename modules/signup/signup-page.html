@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <form class="form-signup">
+                    <input id="reg_fullname" type="text" class="form-control" placeholder="Full name" required autofocus>
+                    <input id="reg_email" type="text" class="form-control" placeholder="Email Address" required>
+                    <input id="reg_pwd" type="password" class="form-control" placeholder="Password" required>
+                    <input id="reg_confirmpwd" type="password" class="form-control" placeholder="Confirm Password" required>
+                    
+                    <label class="">
+                        <input id="reg_buyer" type="radio" name="editList" value="buyer"/>Buyer
+                    </label>
+                    <label class="">
+                        <input id="reg_seller" type="radio" name="editList" value="seller"/>Seller
+                    </label>
+                    <br/>
+                    <button class="registerBtn btn btn-lg btn-primary btn-block" type="submit" ng-click="onRegisterBtnClicked($event)">
+                        Register Now</button>
+                    <a href="#/help" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
