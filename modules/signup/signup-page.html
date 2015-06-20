@@ -7,14 +7,26 @@
                     <input id="reg_email" type="text" class="form-control" placeholder="Email Address" required>
                     <input id="reg_pwd" type="password" class="form-control" placeholder="Password" required>
                     <input id="reg_confirmpwd" type="password" class="form-control" placeholder="Confirm Password" required>
-                    
                     <label class="">
-                        <input id="reg_buyer" type="radio" name="editList" value="buyer"/>Buyer
+                        <input id="reg_buyer" type="radio" name="editList" value="buyer" ng-click="onBuyerSelected($event)"/>Buyer
                     </label>
                     <label class="">
-                        <input id="reg_seller" type="radio" name="editList" value="seller"/>Seller
+                        <input id="reg_seller" type="radio" name="editList" value="seller" ng-click="onSellerSelected($event)"/>Seller
                     </label>
                     <br/>
+                    <div id="reg_catlist" class="row hide">
+                        <h4 style="margin-left:15px;">Please Select Categories you sell</h4>
+                        <br/>
+
+                        <ul id="double">
+                            <li ng-repeat=" opt in catlist">
+
+                                <label class="">
+                                    <input class="reg_checkboxcatgrp" type="checkbox" value="{{ opt.value }}" /><span style="font-size:12px; margin-left:3px;">{{ opt.name }}</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                     <button class="registerBtn btn btn-lg btn-primary btn-block" type="submit" ng-click="onRegisterBtnClicked($event)">
                         Register Now</button>
                     <a href="#/help" class="pull-right need-help">Need help? </a><span class="clearfix"></span>

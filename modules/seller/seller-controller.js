@@ -1,6 +1,5 @@
 var shopGenie = angular.module("shopGenie");
-   
-shopGenie.controller("watuwantodoController", function ($scope, $q, dataService) {
+shopGenie.controller("sellerController", function ($scope, $q, dataService, $rootScope) {
     $scope.text = "Let's hack!";
     $scope.render = function(){
     	

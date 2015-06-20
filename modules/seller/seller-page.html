@@ -1,0 +1,31 @@
+<div class="container">
+ 
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown"
+                style="margin-top :25px; margin-bottom:15px;">  
+                <a id="userwish_anchor" class="btn btn-default active" role="button" ng-click="onViewListClicked($event)"><span>User WishList</span></a>
+                <a id="orders_anchor" class="btn btn-default dummy" role="button" ng-click="onCreateListClicked($event)"><span>Recent Orders</span></a>
+            </div>
+            <div id="viewwishlist" class="row show">
+                <ul class="list-group">
+                    <li class="list-group-item" data-toggle="collapse" data-target="#demow">
+                        Button groups <span class="pull-right glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </li>
+                    <div id="demow" class="collapse" style="padding:10px 5px;">
+                        <span>User Name : </span><span>MSDFDSF SFSDF</span><br/>
+                        <div style="height:5px; width:1px;"></div>
+                        <span>Location : </span><span>Hong Kong</span>
+                        <div style="height:10px; width:1px;"></div>
+                        <ul class="list-group">
+                            <li class="list-group-item">Guitar<span class="badge">Quantity : 1</span></li>
+                            <li class="list-group-item">Item 2<span class="badge">Quantity : 5</span></li>
+                            <li class="list-group-item">Item 3<span class="badge">Quantity : 2</span></li>
+                            <li class="list-group-item">Item 4<span class="badge">Quantity : 1</span></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,6 +23,10 @@ shopGenie.config(function ($routeProvider) {
             templateUrl : "/modules/watuwantodo/watuwantodo-page.html",
             controller : "watuwantodoController"
         })
+        .when("/seller",{
+            templateUrl : "/modules/seller/seller-page.html",
+            controller : "sellerController"
+        })
         .otherwise({
             redirectTo: "/"
         });
