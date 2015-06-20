@@ -4,7 +4,9 @@ shopGenie.service("dataService", function ($http, $q, $rootScope) {
     this.GET = function(_urlToGet, _successCall, _errorCall){
         var myDeferedObj = $q.defer();
         myDeferedObj =
-    	$http.get(_urlToGet)
+    	$http.get(_urlToGet, {
+                headers: {'Authorization': 'Basic '+$rootScope.authString}
+            })
     	.success(function(_data) {
              _successCall(_data);
     	})

@@ -1,5 +1,6 @@
 var shopGenie = angular.module("shopGenie");
 shopGenie.controller("appController", function($scope, $timeout, appService, $location, $rootScope) {
+    $scope.pageHeader = "SHOPTIMIZER";
     $rootScope.mainPath = "http://128.199.154.40:8080/shoptimizer/";
     $rootScope.typeOfUser = "";
     $rootScope.authString = "";

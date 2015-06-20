@@ -36,8 +36,8 @@ shopGenie.controller("signupController", function($scope, $q, $rootScope, dataSe
             "categories" : catSelList
         };
         console.log(JSON.stringify(datatoSend));
-        $scope.onSignUpSucess();
-        //$defered = dataService.POST(signUpURL, datatoSend, $scope.onSignUpSucess, $scope.onSignUpFailure);
+        //$scope.onSignUpSucess();
+        $defered = dataService.POST(signUpURL, datatoSend, $scope.onSignUpSucess, $scope.onSignUpFailure);
     };
     $scope.onSignUpSucess = function(_data) {
         console.log("Sign Up Sucess here");

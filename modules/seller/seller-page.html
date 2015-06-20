@@ -15,16 +15,33 @@
                     <div id="demow" class="collapse" style="padding:10px 5px;">
                         <span>User Name : </span><span>MSDFDSF SFSDF</span><br/>
                         <div style="height:5px; width:1px;"></div>
-                        <span>Location : </span><span>Hong Kong</span>
-                        <div style="height:10px; width:1px;"></div>
                         <ul class="list-group">
-                            <li class="list-group-item">Guitar<span class="badge">Quantity : 1</span></li>
-                            <li class="list-group-item">Item 2<span class="badge">Quantity : 5</span></li>
-                            <li class="list-group-item">Item 3<span class="badge">Quantity : 2</span></li>
-                            <li class="list-group-item">Item 4<span class="badge">Quantity : 1</span></li>
+                            <li class="list-group-item">Guitar<span class="badge" data-toggle="modal" data-target="#myModal"    ng-click="giveOffersTouser($event, 'Guitar')" style="cursor:pointer;">Quantity : 1</span></li>
+                            <li class="list-group-item">Item 2<span class="badge" data-toggle="modal" data-target="#myModal"
+                                ng-click="giveOffersTouser($event, 'Strings')" style="cursor:pointer;">Quantity : 5</span></li>
+                            <li class="list-group-item">Item 3<span class="badge" data-toggle="modal" data-target="#myModal">Quantity : 2</span></li>
+                            <li class="list-group-item">Item 4<span class="badge" data-toggle="modal" data-target="#myModal">Quantity : 1</span></li>
                         </ul>
                     </div>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{selectedItem}}</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" type="text" placeholder="Offer Amount">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Send Offer</button>
+                </div>
             </div>
         </div>
     </div>

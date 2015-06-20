@@ -7,21 +7,24 @@
                 <a id="viewlist_anchor" class="btn btn-default active" role="button" ng-click="onViewListClicked($event)"><span>View List</span></a>
                 <a id="addlist_anchor" class="btn btn-default dummy" role="button" ng-click="onCreateListClicked($event)"><span>Create a List</span></a>
             </div>
-            <div id="viewwishlist" class="row show">
+            <div id="viewwishlist" class="row show" style="margin:10px;">
+                <div ng-show="allWishListItems.length<=0">
+                    <h2>You dont have a wish list yet!</h2>
+                </div>
                 <ul class="list-group">
-                    <div ng-repeat="list in allWishListItems">
+                    <div ng-repeat="list in allWishListItems" ng-hide="allWishListItems.length<=0">
                     <li class="list-group-item" data-toggle="collapse" data-target="#demow_{{$index}}">
                         {{list.wishListName}} <span class="pull-right glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     </li>
                     <div id="demow_{{$index}}" class="collapse" style="padding:10px 5px;">
                         <ul class="list-group">
-                            <li class="list-group-item" ng-repeat="it in list.items">{{it.cat}} : {{it.name}}<span class="badge">{{it.qty}} Pending</span></li>
+                            <li class="list-group-item" ng-repeat="it in list.items">{{it.cat}} : {{it.name}}<span class="badge">{{it.qty}} Pending</span><span ng-click="showOffersForThisItem();" class="badge" style="cursor:pointer;" data-toggle="modal" data-target="#vendorList">view offers</span></li>
                         </ul>
                     </div>
                     </div>
                 </ul>
             </div>
-            <div id="addwishlist" class="row hide" style="padding:15px;">
+            <div id="addwishlist" class="row hide" style="margin:10px;">
                 <div>
                     <input id="addwishlst_name" type="text" placeholder="Wish list Name" class="form-control" required>
                 </div>
@@ -47,6 +50,33 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="modal fade" id="vendorList" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{selectedItem}}</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in vendorList">
+                            <div>
+                                <span>Vendor Name</span>
+                                <span>Offer Amount</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-primary btn-block" type="submit" style="margin-bottom:10px; margin-top:10px;" ng-click="onwishListDoneClicked($event)">Accept Offer</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Wait for moreß Offer</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

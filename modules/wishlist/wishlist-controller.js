@@ -3,7 +3,8 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
     $scope.text = "Let's hack!";
     $scope.wishListItems = [];
     $scope.wishListFromServer = [];
-    $scope.allWishListItems = [{"wishListName":"MNI","items":[{"name":"QWQ","qty":"WE","cat":"W"}]}];
+    $scope.allWishListItems = [];
+    $scope.vendorList = ["1", "122", "12"];
     $scope.render = function() {
         if ($rootScope.typeOfUser == "new") {
             $scope.onCreateListClicked();
@@ -129,11 +130,8 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
         console.log(evt.currentTarget.text);
         document.getElementById("dropdwn_btn_txt").innerHTML = evt.currentTarget.text + "<span class='caret'></span>";
     };
-    $(".dropdown-menu li a").click(function(){
+    $scope.showOffersForThisItem = function(){
 
-      $(".btn:first-child").text($(this).text());
-      $(".btn:first-child").val($(this).text());
-
-   });
+    }
     $scope.render();
 });

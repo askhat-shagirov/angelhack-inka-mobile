@@ -66,9 +66,9 @@ div.container {
     left: 0px;
     width: 100%;
     height: 45px;
-    background-color: #ADC741;
+    background-color: #337ab7;
     text-align: center;
-    z-index: 998;
+    z-index: 1062;
 }
 
 .container .header label {
@@ -135,7 +135,7 @@ hr {
     left: 0px;
     position: absolute;
     transition: 0.3s;
-    z-index: 990;
+    z-index: 1060;
     background-color: #f1f1f1;
     top: 5px;
 }
@@ -152,7 +152,7 @@ hr {
     float: left;
     left: 0px;
     height: 100%;
-    z-index: 1001;
+    z-index: 1064;
     display: table;
     vertical-align: middle;
 }
@@ -184,7 +184,7 @@ hr {
     height: 100%;
     background-color: #4F4D4D;
     opacity: .6;
-    z-index: 1000;
+    z-index: 1063;
 }
 
 .menuIconContainer {
@@ -281,4 +281,7 @@ hr {
 }
 .progressBar img{
     width: 50px;
+}
+.modal{
+    top:60px;
 }
