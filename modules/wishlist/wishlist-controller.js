@@ -13,6 +13,26 @@ shopGenie.controller("wishlistController", function ($scope, $q, dataService, $l
         $scope.clearChildren(cln);
         listContainer.appendChild(cln);
     };
+    var viewWishListCont = document.getElementById("viewwishlist");
+    var addWishListCont = document.getElementById("addwishlist");
+    var viewListAnchor = document.getElementById("viewlist_anchor");
+    var addListAnchor = document.getElementById("addlist_anchor");
+    $scope.onViewListClicked = function(evt){
+
+        viewListAnchor.className = viewListAnchor.className + " active";
+        addListAnchor.className = addListAnchor.className.replace("active", "");
+
+        viewWishListCont.className = viewWishListCont.className.replace("hide", "show");
+        addWishListCont.className = addWishListCont.className.replace("show", "hide");
+    };
+    $scope.onCreateListClicked = function(evt){
+
+      addListAnchor.className = addListAnchor.className + " active";
+      viewListAnchor.className = viewListAnchor.className.replace("active", "");
+
+        viewWishListCont.className = viewWishListCont.className.replace("show", "hide");
+        addWishListCont.className = addWishListCont.className.replace("hide", "show");
+    };
     $scope.clearChildren = function(element) {
        for (var i = 0; i < element.childNodes.length; i++) {
           var e = element.childNodes[i];

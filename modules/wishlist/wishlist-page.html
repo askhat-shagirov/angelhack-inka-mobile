@@ -5,12 +5,12 @@
     </div>
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h4>Wish List Page</h4>
-            <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown">
-                <a class="btn btn-default" role="button"><span ng-click="onViewListClicked($event)">View List</span></a>
-                <a class="btn btn-default" role="button"><span ng-click="onCreateListClicked($event)">Create a List</span></a>
+            <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown"
+            style="margin-top :25px; margin-bottom:15px;">  
+                <a id="viewlist_anchor" class="btn btn-default active" role="button" ng-click="onViewListClicked($event)"><span>View List</span></a>
+                <a id="addlist_anchor" class="btn btn-default" role="button" ng-click="onCreateListClicked($event)"><span>Create a List</span></a>
             </div>
-            <div id="viewwishlist" class="row hide">
+            <div id="viewwishlist" class="row show">
                 <ul class="list-group">
                     <li class="list-group-item" data-toggle="collapse" data-target="#demow">
                         Button groups <span class="pull-right glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -29,7 +29,7 @@
                     <li class="list-group-item">Vestibulum at eros</li>
                 </ul>
             </div>
-            <div id="addwishlist" class="row show" style="padding:15px;">
+            <div id="addwishlist" class="row hide" style="padding:15px;">
                 <div>
                     <input type="text" placeholder="Wish list Name" class="form-control" required>
                 </div>
