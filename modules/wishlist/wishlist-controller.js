@@ -1,10 +1,10 @@
 var shopGenie = angular.module("shopGenie");
-shopGenie.controller("wishlistController", function($scope, $q, dataService, $location, $rootScope) {
+shopGenie.controller("wishlistController", function($scope, $q, dataService, $location, $rootScope, $localStorage) {
     $scope.text = "Let's hack!";
     $scope.wishListItems = [];
     $scope.wishListFromServer = [];
     $scope.allWishListItems = [];
-    $scope.vendorList = ["1", "122", "12"];
+    $scope.vendorList = [{"name":"WallMart", "offerprc":"280RMB"}, {"name":"Reliance Stores", "offerprc":"300RMB"}, {"name":"ABCXYZ Stores", "offerprc":"400RMB"}];
     $scope.render = function() {
         if ($rootScope.typeOfUser == "new") {
             $scope.onCreateListClicked();
@@ -95,7 +95,7 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
     };
     $scope.onwishListDoneClicked = function() {
 
-        $scope.getListItems();
+        var dataToSend =  $scope.getListItems();
         document.getElementById("addwishlst_name").value = "";
         var listContainer = document.getElementById("itemlistContainer");
         var listItem = listContainer.getElementsByClassName("listItems")[0];
@@ -105,7 +105,25 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
         listContainer.appendChild(cln); 
         $scope.onBroadCastClicked();
         $scope.onOnTheFlyClicked();
-        $location.path("/wishlist");
+        console.log(dataToSend);
+        $localStorage.sellerData = JSON.stringify($scope.allWishListItems);
+        var createLlistUrl = $rootScope.mainPath + "api/user/wishlist";
+        dataService.POST(createLlistUrl, dataToSend, $scope.onListCreatedSucess, $scope.onListCreatedError);
+
+
+        
+    };
+    $scope.onListCreatedSucess = function(_data){
+        $rootScope.dataForSeller = $scope.allWishListItems;
+        $localStorage.sellerData = JSON.stringify($scope.allWishListItems);
+         $scope.onViewListClicked();
+         $rootScope.$broadcast('sellerData', $scope.allWishListItems);
+        console.log("Sucess");
+    };
+    $scope.onListCreatedError = function(_error){
+        $rootScope.dataForSeller = $scope.allWishListItems;
+        $scope.onViewListClicked();
+        console.log("Error");
     };
     $scope.getListItems = function() {
         $scope.wishListItems = [];
@@ -121,8 +139,9 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
         }
         wishListObj.items = arrItems;
         $scope.allWishListItems.push(wishListObj);
-        console.log("Data :: " + JSON.stringify($scope.wishListItems));
-        $scope.onViewListClicked();
+        console.log("Data :: " + JSON.stringify(wishListObj));
+        return wishListObj;
+       // $scope.onViewListClicked();
     };
     $scope.getWishList = function() {
         var $defered;
@@ -139,8 +158,8 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
         console.log(evt.currentTarget.text);
         document.getElementById("dropdwn_btn_txt").innerHTML = evt.currentTarget.text + "<span class='caret'></span>";
     };
-    $scope.showOffersForThisItem = function(){
-
+    $scope.showOffersForThisItem = function(evt, _text){
+        $scope.selectedItem = _text;
     }
     $scope.render();
 });

@@ -4,6 +4,7 @@ shopGenie.controller("appController", function($scope, $timeout, appService, $lo
     $rootScope.mainPath = "http://128.199.154.40:8080/shoptimizer/";
     $rootScope.typeOfUser = "";
     $rootScope.authString = "";
+    $rootScope.dataForSeller = {};
     $rootScope.catlist = [{
         "name": "Books",
         "value": "book_store"

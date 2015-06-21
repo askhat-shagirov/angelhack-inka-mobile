@@ -1,5 +1,5 @@
 var shopGenie = angular.module("shopGenie",
-    ["ngRoute", "ngDialog"]);
+    ["ngRoute", "ngDialog", "ngStorage"]);
 
 shopGenie.config(function ($routeProvider) {
     $routeProvider

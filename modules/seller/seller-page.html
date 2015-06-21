@@ -1,7 +1,7 @@
 <div class="container">
  
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="col-sm-6 col-md-4 col-md-offset-4" style="margin:10px;">
             <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group with nested dropdown"
                 style="margin-top :25px; margin-bottom:15px;">  
                 <a id="userwish_anchor" class="btn btn-default active" role="button" ng-click="onViewListClicked($event)"><span>User WishList</span></a>
@@ -9,19 +9,18 @@
             </div>
             <div id="viewwishlist" class="row show" style="margin:10px;">
                 <ul class="list-group">
-                    <li class="list-group-item" data-toggle="collapse" data-target="#demow">
-                        Button groups <span class="pull-right glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <div ng-repeat="list in userWishList" ng-hide="allWishListItems.length<=0">
+
+                    <li class="list-group-item" data-toggle="collapse" data-target="#demow_{{$index}}">
+                        {{list.wishListName}} <span class="pull-right glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     </li>
-                    <div id="demow" class="collapse" style="padding:10px 5px;">
+                    <div id="demow_{{$index}}" class="collapse" style="padding:10px 5px;">
                         <span>User Name : </span><span>MSDFDSF SFSDF</span><br/>
                         <div style="height:5px; width:1px;"></div>
                         <ul class="list-group">
-                            <li class="list-group-item">Guitar<span class="badge" data-toggle="modal" data-target="#myModal"    ng-click="giveOffersTouser($event, 'Guitar')" style="cursor:pointer;">Quantity : 1</span></li>
-                            <li class="list-group-item">Item 2<span class="badge" data-toggle="modal" data-target="#myModal"
-                                ng-click="giveOffersTouser($event, 'Strings')" style="cursor:pointer;">Quantity : 5</span></li>
-                            <li class="list-group-item">Item 3<span class="badge" data-toggle="modal" data-target="#myModal">Quantity : 2</span></li>
-                            <li class="list-group-item">Item 4<span class="badge" data-toggle="modal" data-target="#myModal">Quantity : 1</span></li>
+                            <li class="list-group-item" ng-repeat="it in list.items">{{it.name}}<span class="badge" data-toggle="modal" data-target="#myModal"    ng-click="giveOffersTouser($event, 'Guitar')" style="cursor:pointer;">Quantity : 1</span></li>
                         </ul>
+                    </div>
                     </div>
                 </ul>
             </div>
@@ -40,7 +39,7 @@
                     <input class="form-control" type="text" placeholder="Offer Amount">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Send Offer</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="sendOfferToUser();">Send Offer</button>
                 </div>
             </div>
         </div>

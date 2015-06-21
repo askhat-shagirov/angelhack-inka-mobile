@@ -42,7 +42,11 @@ shopGenie.controller("signupController", function($scope, $q, $rootScope, dataSe
     $scope.onSignUpSucess = function(_data) {
         console.log("Sign Up Sucess here");
         $rootScope.typeOfUser = "new";
-        $location.path("/wishlist");
+        if (document.getElementById("reg_buyer").checked) {
+            $location.path("/wishlist");
+        } else if (document.getElementById("reg_seller").checked) {
+            $location.path("/seller");
+        }
         return false;
 
 

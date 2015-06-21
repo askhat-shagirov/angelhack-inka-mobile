@@ -10,8 +10,8 @@
 		{
 			"contents": "<!Doctype html>\n<html ng-app=\"masterApp\" xmlns=\"http://www.w3.org/1999/html\">\n<head>\n    <meta name=\"viewport\" content=\"initial-scale = 1.0,maximum-scale = 1.0\"/>\n    <title>MasterCard App</title>\n    <link href=\"/assets/indicator.css\" type=\"text/css\" rel=\"stylesheet\"/>\n    <link href=\"/assets/checkout.css\" type=\"text/css\" rel=\"stylesheet\"/>\n    <link href=\"/assets/app.css\" type=\"text/css\" rel=\"stylesheet\"/>\n    <link href=\"/assets/indicator.css\" type=\"text/css\" rel=\"stylesheet\"/>\n    <link href=\"/assets/app.css\" type=\"text/css\" rel=\"stylesheet\"/>\n    <link href=\"/assets/dashboard.css\" type=\"text/css\" rel=\"stylesheet\"/>\n    <link href=\"/assets/ngDialog.css\" type=\"text/css\" rel=\"stylesheet\"/>\n\n</head>\n<body>\n<div class=\"container\" ng-controller=\"appController\" ng-class=\"{'blur':isBlur}\">\n    <div class=\"header\" ng-class=\"showSidebar?'containerHeaderShow':'containerHeaderHide'\">\n        <div class=\"sidebar-toggle\" ng-show=\"!isSubPage\" ng-click=\"showSidebar = !showSidebar\">\n            <img src=\"/static/images/menu.png\"/>\n        </div>\n        <div class=\"sidebar-toggle back\" ng-show=\"isSubPage\" ng-click=\"back()\">\n            <img src=\"/static/images/arrow-back.png\"/>\n        </div>\n        <label>{{pageHeader}}</label>\n        <div ng-show=\"!isSubPage\" class=\"qr-scan\" ng-click=\"scan()\">\n            <img src=\"/static/images/scan.png\"/>\n        </div>\n    </div>\n    <div class=\"sidebar\" ng-class=\"showSidebar?'show':'hide'\">\n        <div class=\"menuIconContainer\">\n            <ul>\n                <li class=\"cursor\">\n                    <img src=\"/static/images/home.png\" ng-click=\"gotoPage('/dashboard')\" class=\"menuIconImage\">\n                </li>\n                <li >\n                    <img src=\"/static/images/recipient.png\" ng-click=\"gotoPage('/recepients')\" class=\"menuIconImage\">\n                </li>\n                <li >\n                    <img src=\"/static/images/cart.png\" ng-click=\"gotoPage('/checkout')\" class=\"menuIconImage\">\n                </li>\n                <li >\n                    <img src=\"/static/images/history.png\" ng-click=\"gotoPage('/recepients')\" class=\"menuIconImage\">\n                </li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"mainOverlay\" ng-click=\"onOverlayClicked($event)\"  ng-class=\"showSidebar?'ng-show':'ng-hide'\" ></div>\n    <div class=\"main\" ng-class=\"getMainClass()\" ng-view>\n\n    </div>\n</div>\n<script type=\"text/javascript\" src=\"/libs/socket.io-1.3.4.js\"></script>\n\n<script type=\"text/javascript\" src=\"/libs/angular/angular.js\"></script>\n<script type=\"text/javascript\" src=\"/libs/angular/angular-route.js\"></script>\n<script type=\"text/javascript\" src=\"/libs/angular/angular-touch.js\"></script>\n<script type=\"text/javascript\" src=\"/libs/angular/ngDialog.js\"></script>\n\n<script type=\"text/javascript\" src=\"/modules/app-init.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/app-controller.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/app-service.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/services/data-services.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/app-service.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/checkout/checkout-controller.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/checkout/checkout-service.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/recepients/select-recepient-controller.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/recepients/recepients-service.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/recepients/view-recepients-controller.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/recepients/recepient-detail-controller.js\"></script>\n\n<script type=\"text/javascript\" src=\"/modules/checkout/checkout-success-controller.js\"></script>\n<!-- -->\n<script type=\"text/javascript\" src=\"/modules/splash/splash-controller.js\"></script>\n<!-- Dashboard Page -->\n<script type=\"text/javascript\" src=\"/modules/dashboard/dashboard-controller.js\"></script>\n\n<!-- Shopping Card Page -->\n<script type=\"text/javascript\" src=\"/modules/shoppingcart/shoppingcart-controller.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/shoppingcart/shopingcart-service.js\"></script>\n\n<script type=\"text/javascript\" src=\"/modules/checkout/checkout-service.js\"></script>\n\n<script type=\"text/javascript\" src=\"/modules/login/login-controller.js\"></script>\n<script type=\"text/javascript\" src=\"/modules/login/login-service.js\"></script>\n\n</body>\n</html>",
 			"file": "index.html",
-			"file_size": 4541,
-			"file_write_time": 1434712386000000,
+			"file_size": 3888,
+			"file_write_time": 1434857208000000,
 			"settings":
 			{
 				"buffer_size": 4467,
@@ -78,7 +78,6 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
@@ -104,7 +103,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 667.0,
+						"translation.y": 666.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
