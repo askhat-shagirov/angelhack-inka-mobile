@@ -22,8 +22,9 @@ shopGenie.controller("sellerController", function ($scope, $q, dataService, $roo
     function getFromLocalStorage(){
         var myObj = JSON.parse($localStorage.sellerData);
         if($scope.userWishList != myObj){
-            $scope.userWishList = myObj;
+            $scope.userWishListmyObj;
         }
+        //$scope.sellerlistPoller();
         console.log("Data GOt");
     }
     $scope.sendOfferToUser = function(){
