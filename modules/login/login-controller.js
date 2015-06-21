@@ -20,7 +20,7 @@ shopGenie.controller("loginController", function ($scope, $q, $location, $rootSc
     $scope.onLoginSucess = function(data){
         console.log("Data Called ::: " + data);
         $rootScope.typeOfUser = "existing";
-        $scope.userType = "SELLER";
+        $scope.userType = "BUYER";
         if($scope.userType == "BUYER"){
             $location.path("/wishlist");
         }else if($scope.userType == "SELLER"){

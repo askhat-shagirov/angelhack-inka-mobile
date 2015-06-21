@@ -4,6 +4,7 @@ shopGenie.controller("sellerController", function ($scope, $q, dataService, $roo
     $scope.selectedItem = "";
     $scope.render = function(){
     	var listUrl = $rootScope.mainPath + "api/seller/wishes";
+    	dataService.G
     };
     $scope.giveOffersTouser = function(evt, _text){
     	$scope.selectedItem = _text;

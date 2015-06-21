@@ -16,17 +16,17 @@
 <div class="container" ng-controller="appController" ng-class="{'blur':isBlur}">
     <div class="header" ng-class="showSidebar?'containerHeaderShow':'containerHeaderHide'">
         <div class="sidebar-toggle" ng-show="!isSubPage" ng-click="showSidebar = !showSidebar">
-            <img src="/static/images/menu.png"/>
+            <!--<img src="/static/images/menu.png"/>-->
         </div>
         <div class="sidebar-toggle back" ng-show="isSubPage" ng-click="back()">
             <img src="/static/images/arrow-back.png"/>
         </div>
         <label>{{pageHeader}}</label>
         <div ng-show="!isSubPage" class="qr-scan" ng-click="scan()">
-            <img src="/static/images/scan.png"/>
+            <!--<img src="/static/images/scan.png"/>-->
         </div>
     </div>
-    <div class="sidebar" ng-class="showSidebar?'show':'hide'">
+    <div class="sidebar" ng-class="showSidebar?'show':'hide'" class="ng-hide" style="display:none;">
         <div class="menuIconContainer">
             <ul>
                 <li class="cursor">
