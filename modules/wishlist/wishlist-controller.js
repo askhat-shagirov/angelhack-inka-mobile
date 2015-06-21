@@ -96,6 +96,15 @@ shopGenie.controller("wishlistController", function($scope, $q, dataService, $lo
     $scope.onwishListDoneClicked = function() {
 
         $scope.getListItems();
+        document.getElementById("addwishlst_name").value = "";
+        var listContainer = document.getElementById("itemlistContainer");
+        var listItem = listContainer.getElementsByClassName("listItems")[0];
+        var cln = listItem.cloneNode(true);
+        $scope.clearChildren(cln);
+        listContainer.innerHTML = "";
+        listContainer.appendChild(cln); 
+        $scope.onBroadCastClicked();
+        $scope.onOnTheFlyClicked();
         $location.path("/wishlist");
     };
     $scope.getListItems = function() {
